@@ -11,22 +11,57 @@
 <head>
     <title>all-employees</title>
     <style>
+        input {
+            border: none;
+            background: none;
+            margin: 2%;
+        }
+        input:focus {
+            outline: none;
+        }
         th {
             font-size: 130%;
             letter-spacing: 4px;
             padding-right: 6%;
             padding-bottom: 2%;
         }
-        .butAdd:focus {
-            outline: none;
+        input.bp {
+
+            margin: 2%;
 
         }
         a.but {
             text-decoration: none;
+            margin: 2%;
+            border: none;
+            padding: 2% 5%;
+            background: #a9a9a9;
+            border-radius: 25px;
+            box-shadow: 3px 3px 5px 1px;
+            display: grid;
+
         }
         a.but:hover {
-            border: solid 2px;
-            background: #a9a9a9
+            background: #838383;
+        }
+        a.but:active {
+            background: #696969;
+        }
+        a.butAdd {
+            margin: 2%;
+            border: none;
+            padding: 1% 5%;
+            background: #79da7978;
+            border-radius: 25px;
+            box-shadow: 3px 3px 5px 3px;
+        }
+        a.butAdd:hover {
+            background: #79da79ba;
+            box-shadow: 4px 4px 5px 3px;
+        }
+        a.butAdd:active {
+            background: #79da79;
+            box-shadow: 5px 5px 5px 3px;
         }
 
     </style>
@@ -61,11 +96,9 @@
             <td>${emp.department}</td>
             <td>${emp.salary}</td>
             <td>
-               <a class="but"><input class="butAdd" style="margin: 2%;border: none;padding: 1% 5%;background: #a9a9a9;border-radius: 25px;
-    box-shadow: 3px 3px 5px 1px;" type="button" value="Update" onclick="window.location.href = '${updateButton}'"/></a>
+               <a class="but"><input class="bp" type="button" value="Update" onclick="window.location.href = '${updateButton}'"/></a>
 
-                <input class="butAdd" style="margin: 2%;border: none;padding: 1% 5%;background: #a9a9a9;border-radius: 25px;
-    box-shadow: 3px 3px 5px 1px;" type="button" value="Delete" onclick="window.location.href = '${deleteButton}'"/>
+                <a class="but"><input class="bp"  type="button" value="Delete" onclick="window.location.href = '${deleteButton}'"/></a>
             </td>
         </tr>
 
@@ -76,8 +109,7 @@
 </div>
 
 <br>
-<input class="butAdd" style="margin: 2%;border: none;padding: 1% 5%;background: #79da7978;border-radius: 25px;
-    box-shadow: 3px 3px 5px 3px;" type="button" value="Add" onclick="window.location.href = 'addNewEmployee'"/>
+<a class="butAdd" onclick="window.location.href = 'addNewEmployee'"><input style="" type="button" value="Add" /></a>
 
 
 
