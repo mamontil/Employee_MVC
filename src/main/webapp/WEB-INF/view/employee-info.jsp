@@ -12,9 +12,29 @@
 <head>
     <title>employee-info</title>
     <style>
-        .butAdd:focus {
+        input {
+            background: none;
+            margin: 2%;
+        }
+        input:focus {
             outline: none;
-
+        }
+        input.butAdd {
+            border: none;
+        }
+        a.butAdd {
+            margin: 2%;
+            border: none;
+            padding: 1% 5%;
+            background: #79da7978;
+            border-radius: 25px;
+            box-shadow: 3px 3px 5px 3px;
+        }
+        a.butAdd:hover {
+            background: #79da79ba;
+        }
+        a.butAdd:active {
+            background: #79da79;
         }
 
     </style>
@@ -25,12 +45,11 @@
 <form:form  style="display: inline-grid;padding:2%; box-shadow: 3px 3px 3px 3px; background: pink; border-radius: 25px;" action="saveEmployee" modelAttribute="employee">
     <form:hidden path="id"/>
     Name <form:input path="name"/>
-    Surame <form:input path="surname"/>
+    Surname <form:input path="surname"/>
     Department <form:input path="department"/>
     Salary <form:input path="salary"/>
 
-<input class="butAdd" style="margin: 15%;border: none;padding: 1% 5%;background: #79da7978;border-radius: 25px;
-    box-shadow: 3px 3px 5px 3px;" type="submit" value="OK">
+<a class="butAdd"> <input class="butAdd" type="submit" value="OK"> </a>
 </form:form>
 </body>
 </html>
